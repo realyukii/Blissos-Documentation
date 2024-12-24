@@ -73,3 +73,12 @@ qemu-system-x86_64 -M q35 -enable-kvm -cpu host -smp 4 -m 4096 \
 save it as `run_emulator.sh` on `<working-directory>`, chmod it, run it, and enjoy!
 
 please note that some option on the script may need an adjustment based on your linux environment.
+
+# Tips
+
+if you already have bliss os installed on qemu's qcow virtual disk, you might want to consider use this way to gain the following advantages:
+- boost the boot time a little bit by skip bootloader phase
+- make modify kernel parameter a lot easier and quicker
+
+if you decided to switch your workflow to this way, consider migrate your android's data by mount qcow2 disk through network block device, please refer to [this post](https://unix.stackexchange.com/questions/268460/how-to-mount-qcow2-image) for HOWTO, but keep in mind sometimes migrating process will not work as expected and can cause boot loop, so please proceed with caution!
+
