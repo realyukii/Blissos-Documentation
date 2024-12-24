@@ -4,11 +4,11 @@ We are wide open to users submitting their documentation updates to our docs.bli
 
 **Documentation:**
 
-{% embed url="https://github.com/BlissRoms-x86/docs" %}
+{% embed url="https://github.com/BlissRoms-x86/Documentation" %}
 
 **Knowledgebase:**
 
-{% embed url="https://github.com/BlissRoms-x86/knowledgebase" %}
+{% embed url="https://github.com/BlissRoms-x86/Documentation/knowledgebase" %}
 
 **Support Site:**
 
