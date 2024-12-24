@@ -9,8 +9,8 @@
 Create a new empty virtual disk:
 
 ```
-dd if=/dev/zero of=./android.img bs=1 count=0 seek=8G
-mkfs.ext4 -F ./android.img
+dd if=/dev/zero of=<working-directory>/android.img bs=1 count=0 seek=8G
+mkfs.ext4 -F <working-directory>/android.img
 ```
 
 ## Installation
@@ -25,7 +25,7 @@ mount `android.img`:
 
 ```
 mkdir <android-directory>
-sudo mount ./android.img <android-directory>
+sudo mount <working-directory>/android.img <android-directory>
 ```
 
 and copy the following required image:
@@ -58,7 +58,7 @@ create a wrapper script to run qemu:
 #!/bin/bash
 
 qemu-system-x86_64 -M q35 -enable-kvm -cpu host -smp 4 -m 4096 \
--drive file=./android.img,format=raw,cache=none,if=virtio \
+-drive file=<working-directory>/android.img,format=raw,cache=none,if=virtio \
 -display gtk,gl=es,show-cursor=on \
 -device virtio-vga-gl \
 -net nic,model=virtio-net-pci -net user,hostfwd=tcp::5555-:5555 \
@@ -66,8 +66,8 @@ qemu-system-x86_64 -M q35 -enable-kvm -cpu host -smp 4 -m 4096 \
 -device virtio-tablet-pci -device virtio-keyboard-pci \
 -serial mon:stdio \
 -audiodev pipewire,id=snd0 -device AC97,audiodev=snd0 \
--kernel ./kernel -append "root=/dev/ram0 quiet SRC=/ VIRT_WIFI=1 console=ttyS0 androidboot.enable_console=1" \
--initrd ./initrd.img
+-kernel <working-directory>/kernel -append "root=/dev/ram0 quiet SRC=/ VIRT_WIFI=1 console=ttyS0 androidboot.enable_console=1" \
+-initrd <working-directory>/initrd.img
 ```
 
 save it as `run_emulator.sh` on `<working-directory>`, chmod it, run it, and enjoy!
