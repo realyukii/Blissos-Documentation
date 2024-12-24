@@ -4,7 +4,7 @@
 
 ## Preparation
 
-[Bliss OS live CD ISO](https://blissos.org/index.html#download) and [QEMU](https://www.qemu.org/download/#windows).
+[Bliss OS live CD ISO](https://blissos.org/index.html#download) and [QEMU](https://www.qemu.org/download).
 
 Create a new empty virtual disk:
 
