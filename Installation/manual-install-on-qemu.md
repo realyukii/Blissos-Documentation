@@ -1,6 +1,6 @@
 # Manual Install on QEMU
 
-> The following tutorial have been tested for `Bliss-Zenith-v16.9.6-x86_64-OFFICIAL-gapps-20240715.iso` on linux host.
+> The following tutorial has been tested for `Bliss-Zenith-v16.9.6-x86_64-OFFICIAL-gapps-20240715.iso` on linux host.
 
 ## Preparation
 
