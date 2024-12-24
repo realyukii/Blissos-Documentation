@@ -74,7 +74,7 @@ save it as `run_emulator.sh` on `<working-directory>`, chmod it, run it, and enj
 
 please note that some option on the script may need an adjustment based on your linux environment.
 
-# Tips
+## Tips
 
 if you already have bliss os installed on qemu's qcow virtual disk, you might want to consider use this way to gain the following advantages:
 - boost the boot time a little bit by skip bootloader phase
@@ -82,5 +82,5 @@ if you already have bliss os installed on qemu's qcow virtual disk, you might wa
 
 if you decided to switch your workflow to this way, consider migrate your android's data by mount qcow2 disk through network block device, please refer to [this post](https://unix.stackexchange.com/questions/268460/how-to-mount-qcow2-image) for HOWTO, but keep in mind sometimes migrating process will not work as expected and can cause boot loop, so please proceed with caution!
 
-# Note
+## Note
 I don't know how to setup A/B partition scheme manually to add seamless system update, so if you want to use A/B partition scheme, I recommend you to use the installer instead of this manual installation.
